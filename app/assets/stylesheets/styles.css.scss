@@ -1,0 +1,147 @@
+$main_red: #e52900;
+
+body {
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", sans-serif;
+  // font-family: "ff-tisa-web-pro", "georgia", serif;
+
+  color:#555555;
+  font-size: large;
+  line-height: 1.4;
+  background:#fafafa;
+}
+
+h1, h2, h3, h4 {
+  font-family: "proxima nova", "adelle-sans", "Helvetica", sans-serif;
+  color:#303030;
+}
+
+h1 { color: $main_red; }
+h2 { text-transform:uppercase; margin:0; padding:1em 0; font-weight:100; color:$main_red; font-size:1.75em; }
+h3 { font-size:36px; font-weight:500; margin:3em 0 2em; }
+h4 { margin:0 0 .5em; text-transform:uppercase; font-weight:500; }
+
+p { font-size:large; line-height:1.5; color: #555555;}
+
+.navigation-bar {
+  width:100%;
+  background:$main_red;
+  height:8px;
+}
+
+.social-bar {
+  background: lighten($main_red, 45%);
+}
+
+.social-icon {
+  display:inline-block;
+  width:40px;
+  height:40px;
+  margin:0;
+}
+
+.container {
+  width:960px;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+
+.right-align { text-align:right; }
+
+.column-1   { width:80px;  }
+.column-2   { width:160px; }
+.column-3   { width:240px; }
+.column-4   { width:320px; }
+.column-5   { width:400px; }
+.column-6   { width:480px; }
+.column-7   { width:560px; }
+.column-8   { width:640px; }
+.column-9   { width:720px; }
+.column-10  { width:800px; }
+.column-11  { width:880px; }
+.column-12  { width:960px; }
+
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5,
+.column-6,
+.column-7,
+.column-8,
+.column-9,
+.column-10,
+.column-11,
+.column-12, {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.offset-1   { margin-left: 80px; }
+.offset-2   { margin-left: 160px; }
+.offset-3   { margin-left: 240px; }
+.offset-4   { margin-left: 320px; }
+.offset-5   { margin-left: 400px; }
+.offset-6   { margin-left: 480px; }
+.offset-7   { margin-left: 560px; }
+.offset-8   { margin-left: 640px; }
+.offset-9   { margin-left: 720px; }
+.offset-10  { margin-left: 800px; }
+.offset-11  { margin-left: 880px; }
+
+
+
+/*  ------------------------------------------
+      Home Page
+    ------------------------------------------ */    
+.home-hero        { margin-bottom:10em; }
+.home-explore     { position:relative; margin-bottom:10em;}
+.home-explore h2  { margin-bottom:2em; }
+.home-explore h4  { color:#666; }
+.home-explore p   { color:#777; -webkit-font-smoothing: antialiased; }
+
+
+.adventure { 
+  box-sizing: border-box;
+  background:white;
+  border:1px solid rgba(0,0,0,.2);
+  
+  border-radius:4px;
+  margin-bottom: 4em;
+  max-height: 352px;
+
+     -moz-transition: -moz-box-shadow 0.2s;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+       -o-transition: -o-box-shadow 0.2s;
+          transition: box-shadow 0.2s;
+
+}
+
+.healthy-kale.adventure:hover { box-shadow:0 0 4px rgba(0,255,0,.3); }
+.fitfeud-cor.adventure:hover { box-shadow:0 0 4px rgba(255,0,0,.3); }
+.entrepreneurs-fosterly.adventure:hover { box-shadow:0 0 4px rgba(0,255,255,.3); }
+
+.adventure-description {
+  padding-top:2.5em;
+}
+
+.adventure h3 { 
+  margin:0; 
+  font-size:4em; 
+  font-weight:500; 
+  color:#444; 
+}
+
+.adventure p { margin-top:0; }
+
+.adventure img { 
+  margin-left:61px; 
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+}
+
+.skills-provided {
+  font-size: .75em;
+  color:#999;
+}
+
+

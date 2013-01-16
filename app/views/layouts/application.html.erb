@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paul Mederos</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' 
+        rel='stylesheet' type='text/css'>
+
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="//use.typekit.net/wiv5iog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
