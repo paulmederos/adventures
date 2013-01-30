@@ -13,3 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function() {
+
+  $('.description-trigger-open').click(function(){
+    // Show the content based on data attribute of link clicked.
+    var description = '#' + $(this).data('description');
+    $(description).fadeIn('fast');
+    $(this).hide();
+    event.preventDefault();
+  });
+
+  $('.description-trigger-close').click(function(){
+    // Show the content based on data attribute of link clicked.
+    var description = $(this).data('description');
+    var descriptionElement = '#' + description;
+    $(descriptionElement).fadeOut('fast');
+    $(".description-trigger-open[data-slide='" + description +"']").fadeIn();
+    event.preventDefault();
+  });
+
+});
