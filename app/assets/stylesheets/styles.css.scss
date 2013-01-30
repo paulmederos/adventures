@@ -1,4 +1,5 @@
 $main_red: #e52900;
+$dark_red: #9B2208;
 $body_background: #fafafa;
 
 body {
@@ -228,11 +229,17 @@ p { font-size:large; line-height:1.5; color: #555555;}
   float:left;
   width:70%;
 
-    h4 { 
+  h4 { 
     font-size: 24px;
     font-weight: 500;
     color:#e52900;
     text-transform: none;
+
+    
+    a { text-decoration:none; }
+    a:visited { color: inherit; }
+    a:hover { text-decoration:underline; color: $dark_red; }
+    
   }
 
   h5 {
