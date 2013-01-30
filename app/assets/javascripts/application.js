@@ -20,7 +20,7 @@ $(document).ready(function() {
   $('.description-trigger-open').click(function(){
     // Show the content based on data attribute of link clicked.
     var description = '#' + $(this).data('description');
-    $(description).fadeIn('fast');
+    $(description).slideDown(300, 'swing');
     $(this).hide();
     event.preventDefault();
   });
@@ -29,8 +29,8 @@ $(document).ready(function() {
     // Show the content based on data attribute of link clicked.
     var description = $(this).data('description');
     var descriptionElement = '#' + description;
-    $(descriptionElement).fadeOut('fast');
-    $(".description-trigger-open[data-slide='" + description +"']").fadeIn();
+    $(descriptionElement).slideUp(300, 'swing');
+    $(".description-trigger-open[data-description='" + description +"']").fadeIn();
     event.preventDefault();
   });
 
