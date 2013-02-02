@@ -17,21 +17,23 @@
 
 $(document).ready(function() {
 
-  $('.description-trigger-open').click(function(){
-    // Show the content based on data attribute of link clicked.
+  $('.timeline-preview').toggle(function() {
     var description = '#' + $(this).data('description');
     $(description).slideDown(300, 'swing');
-    $(this).hide();
+    $(this).addClass('pressed');
     event.preventDefault();
-  });
-
-  $('.description-trigger-close').click(function(){
-    // Show the content based on data attribute of link clicked.
-    var description = $(this).data('description');
-    var descriptionElement = '#' + description;
-    $(descriptionElement).slideUp(300, 'swing');
-    $(".description-trigger-open[data-description='" + description +"']").fadeIn();
-    event.preventDefault();
+  }, function() {
+    // Hide the content based on data attribute of link clicked.
+    hideTimelineDescription($(this));
   });
 
 });
+
+function hideTimelineDescription(toggledButton){
+    var description = toggledButton.data('description');
+    var descriptionElement = '#' + description;
+    $(descriptionElement).slideUp(300, 'swing');
+    toggledButton.removeClass('pressed');
+    $(".description-trigger-open[data-description='" + description +"']").fadeIn();
+    event.preventDefault();
+}
