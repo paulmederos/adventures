@@ -46,6 +46,10 @@ p { font-size:large; line-height:1.5; color: #555555;}
   box-sizing: border-box;
 }
 
+.container-responsive {
+  width:72%;
+}
+
 .right-align { text-align:right; }
 
 .column-1   { width:80px;  }
@@ -92,7 +96,7 @@ p { font-size:large; line-height:1.5; color: #555555;}
 
 
 /*  ------------------------------------------
-      Home Page
+      Home Page Rev. 1
     ------------------------------------------ */    
 .home-hero        { margin-bottom:10em; }
 .home-explore     { position:relative; margin-bottom:10em;}
@@ -145,192 +149,275 @@ p { font-size:large; line-height:1.5; color: #555555;}
   color:#999;
 }
 
+/*  ------------------------------------------
+      Adventure Rev. 1 Page
+    ------------------------------------------ */
+
+.my-adventures-r1 {    
+
+    .adventures-timeline {
+      background:url("/assets/timeline-spine.png") repeat-y top center;
+      height:auto;
+      border-top:4px solid #e52900;
+      padding:0;
+      list-style: none;
+    }
+
+    .year {
+      font-size: 18px;
+      color:#999;
+      padding-top:.25em;
+    }
+
+    .inner-year { border-top:4px solid rgba(0,0,0,.1); width:48%; }
+
+    .timeline-item {
+      display:block;
+      margin: 2em auto 4em;
+      position: relative;
+    }
+
+    .timeline-point {
+      border-radius: 50%;
+      width:10px;
+      height:10px;
+      border:3px solid $main_red;
+      background: white;
+      position: absolute;
+      top:0;
+      left:48.6%;
+      z-index: 3;
+    }
+
+    .timeline-point:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: -4px;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent white transparent;
+      border-style: solid;
+      border-width: 10px;
+    }
+
+    .timeline-point:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: -4px;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent #ccc transparent;
+      border-style: solid;
+      border-width: 10px;
+    }
+
+    .timeline-container {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, .1);
+      border-radius: 2px;
+      padding: .75em;
+      z-index: 1;
+      position: relative;
+      top: 1.9em;
+    }
+
+
+
+    .timeline-brief {
+      text-align: right;
+      float:left;
+      width:70%;
+
+      h4 { 
+        font-size: 24px;
+        font-weight: 500;
+        color:#e52900;
+        text-transform: none;
+
+        
+        a { text-decoration:none; }
+        a:visited { color: inherit; }
+        a:hover { text-decoration:underline; color: $dark_red; }
+        
+      }
+
+      h5 {
+        font-size:12px;
+        color:#999;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .timeline-showcase {
+      float:left;
+      width:22%;
+      padding-left:8%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .timeline-preview {
+      display: block;
+      width:100%;
+      min-height: 36px;
+      box-shadow:0 1px 3px rgba(0,0,0,.2);
+      -webkit-transition: all .3s ease-in-out;
+    }
+
+    .timeline-preview:hover {
+      box-shadow:0 1px 4px rgba(0,0,0,.3);
+      cursor: pointer;
+    }
+
+    .timeline-description {
+      display: none; // Will show up using JS on click
+      background: $body_background;
+      padding:.25em 1em 1em;
+      margin-top: 3em;
+      font-size:18px;
+      color: #999;
+
+      h6 { font-size:1.2em; margin:0 0 .5em; font-weight:100; color:#222;}
+      img { max-height:480px; }
+    }
+
+    .description-trigger-open,
+    .description-trigger-close {
+      position: absolute;
+      bottom: .5em;
+      left: .5em;
+      background: $body_background;
+      border-radius: 3px;
+      padding: .2em .4em .1em;
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      border:1px solid rgba(0,0,0,.2);
+    }
+
+    .description-trigger-open { 
+      border:1px solid $main_red; 
+      background: $main_red;
+
+      &:hover {
+        border-color:rgba(0,0,0,.25);
+        background-color: $main_red;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%), $main_red; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1))), $main_red; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* W3C */
+      }
+    }
+    .description-trigger-close { 
+      color: #aaa; 
+
+      &:hover {
+        border-color:rgba(0,0,0,.25);
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* W3C */
+      }
+    }
+
+    .pressed {
+      box-shadow:inset 0 1px 4px rgba(0,0,0,.3);
+    }
+
+    .pressed:hover { box-shadow: inherit; }
+
+}
 
 
 /*  ------------------------------------------
-      Adventure Page
+      Adventure Page Rev. 2
     ------------------------------------------ */    
 
-.adventures-timeline {
+.adventures { padding-bottom:4em; }
+
+.timeline-container {
+  width:6%;
+  position:fixed;
+  top:5em;
+  right:1em;
+  
   background:url("/assets/timeline-spine.png") repeat-y top center;
   height:auto;
   border-top:4px solid #e52900;
+  min-height: 400px;
+}
+
+.intro {
+  width:76%;
+  margin:10em 0 15em;
+}
+
+.portfolio { list-style:none; margin:0; padding:0;}
+
+.item-overview {
+  border:1px solid rgba(0,0,0,.15);
+  padding:1em 4%;
+  border-radius:3px;
+  background:white;
+
+  h4 { font-size: 2.2em; color:#333; text-transform:none; margin:0;}
+  h4 a { color:inherit; text-decoration:none; }
+
+  h5 { font-weight:100; color:#999; font-size:.8em; margin:1em 0;}
+  p { margin-bottom:0; font-size:1.2em;}
+}
+
+.product-showcase {
+  margin: 0;
   padding:0;
   list-style: none;
-}
-
-.year {
-  font-size: 18px;
-  color:#999;
-  padding-top:.25em;
-}
-
-.inner-year { border-top:4px solid rgba(0,0,0,.1); width:48%; }
-
-.timeline-item {
-  display:block;
-  margin: 2em auto 4em;
-  position: relative;
-}
-
-.timeline-point {
-  border-radius: 50%;
-  width:10px;
-  height:10px;
-  border:3px solid $main_red;
-  background: white;
-  position: absolute;
-  top:0;
-  left:48.6%;
-  z-index: 3;
-}
-
-.timeline-point:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 13px;
-  left: -4px;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent white transparent;
-  border-style: solid;
-  border-width: 10px;
-}
-
-.timeline-point:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 12px;
-  left: -4px;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent #ccc transparent;
-  border-style: solid;
-  border-width: 10px;
-}
-
-.timeline-container {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, .1);
-  border-radius: 2px;
-  padding: .75em;
-  z-index: 1;
-  position: relative;
-  top: 1.9em;
-}
-
-
-
-.timeline-brief {
   text-align: right;
-  float:left;
-  width:70%;
 
-  h4 { 
-    font-size: 24px;
-    font-weight: 500;
-    color:#e52900;
-    text-transform: none;
+  h6 { margin:2em 0 0; font-size:1em; color: #666; font-weight:100;}
+  p { margin:0; font-size:1em; color:#999; font-weight:100;}
+}
 
-    
-    a { text-decoration:none; }
-    a:visited { color: inherit; }
-    a:hover { text-decoration:underline; color: $dark_red; }
-    
+.product-screenshot {
+  margin:10em 0;
+}
+
+.hero-image { max-width:800px; }
+
+
+
+@media only screen and (max-width: 35em) {
+  
+  .container-responsive { width:96%; }
+
+  .intro { width:100%; margin-top:0;}
+
+  .timeline-container {
+    width:30%;
+    margin:0 auto;
+    display: none;
+    z-index: 3;
   }
 
-  h5 {
-    font-size:12px;
-    color:#999;
-    font-weight: 500;
+  .item-overview {
+
+    h4 { font-size:1.5em; }
+    h5 {font-size:.65em; }
+    p {font-size:.8em;}
   }
 
-  p {
-    font-size: 15px;
-  }
+  .product-showcase { text-align:center; }
 }
 
-.timeline-showcase {
-  float:left;
-  width:22%;
-  padding-left:8%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.timeline-preview {
-  display: block;
-  width:100%;
-  min-height: 36px;
-  box-shadow:0 1px 3px rgba(0,0,0,.2);
-  -webkit-transition: all .3s ease-in-out;
-}
-
-.timeline-preview:hover {
-  box-shadow:0 1px 4px rgba(0,0,0,.3);
-  cursor: pointer;
-}
-
-.timeline-description {
-  display: none; // Will show up using JS on click
-  background: $body_background;
-  padding:.25em 1em 1em;
-  margin-top: 3em;
-  font-size:18px;
-  color: #999;
-
-  h6 { font-size:1.2em; margin:0 0 .5em; font-weight:100; color:#222;}
-  img { max-height:480px; }
-}
-
-.description-trigger-open,
-.description-trigger-close {
-  position: absolute;
-  bottom: .5em;
-  left: .5em;
-  background: $body_background;
-  border-radius: 3px;
-  padding: .2em .4em .1em;
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  border:1px solid rgba(0,0,0,.2);
-}
-
-.description-trigger-open { 
-  border:1px solid $main_red; 
-  background: $main_red;
-
-  &:hover {
-    border-color:rgba(0,0,0,.25);
-    background-color: $main_red;
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%), $main_red; /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1))), $main_red; /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%), $main_red; /* W3C */
-  }
-}
-.description-trigger-close { 
-  color: #aaa; 
-
-  &:hover {
-    border-color:rgba(0,0,0,.25);
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%); /* W3C */
-  }
-}
-
-.pressed {
-  box-shadow:inset 0 1px 4px rgba(0,0,0,.3);
-}
-
-.pressed:hover { box-shadow: inherit; }
 

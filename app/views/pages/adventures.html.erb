@@ -1,86 +1,90 @@
 <div class="navigation-bar"></div>
-<div class="container">
-  <div class="social-bar offset-1 column-2">
+<div class="container container-responsive">
+  <div class="social-bar column-2">
     <a href="http://twitter.com/pvm" class="social-icon twitter"></a>
     <a href="http://dribbble.com/pvm" class="social-icon dribble"></a>
   </div>
 
-  <div class="my-adventures">
-    <h3 class="offset-1 column-10">Adventures</h3>
-<!--     <div class="offset-1 column-7">
+  <div class="adventures">
+    <div class="timeline-container"></div>
+    <div class="intro">
+      <h3>Adventures</h3>
       <p>By thinking through ideal solutions, you’re forced to consider a problem from all sorts of perspectives. I learned early on that the more perspectives you could bring to the table, the stronger your ability to craft a solution that made sense.</p>
 
       <p>Fewer perspectives mean a less-than-satisfactory result. And anything less than your best effort just isn’t worth it. I needed to keep an open mind; I needed to learn and appreciate from those around me.</p>
+    </div>
 
-      <p>This sort of thinking is labeled "design thinking", as-in thinking about <em>why</em> a series of systems isn’t accomplishing a particular goal, <em>what</em> the system is composed of, and <em>how</em> to change it to fix the problem.</p>
-
-      <p>This is what I enjoy doing.</p>
-
-      <p>I wanted to reflect on where I’ve come from so I could better understand where I should be going. This involved piecing together the series of my experiences. It’s currently incomplete, but below you’ll find enough to get you in trouble.</p>
-    </div> -->
-
-    <ol class="offset-1 adventures-timeline column-7">
-      <li class="year">2013</li>
-
-      <li class="timeline-item">
-        <div class="timeline-point"></div>
-        <div class="timeline-container cf" id="kale-container">
-          <div class="timeline-brief">
-            <h4><a href="http://getkale.com">Kale</a></h4>
-            <h5>Product design &middot; Rails Web API &middot; iOS Client</h5>
-            <p>Celebrate your food to eat healthier. Kale helps people track and share their meals.</p>
-          </div><!-- end .timeline-brief -->
-          <div class="timeline-showcase">
-            <img src="http://paulmederos.s3.amazonaws.com/adventures/kale-preview.png" 
-                 class="timeline-preview" data-description="timeline-kale" />
-          </div>
-        </div><!-- end .timeline-container -->
-        <div class="timeline-description" id="timeline-kale">
-          <img src="http://paulmederos.s3.amazonaws.com/adventures/kale-hero.png" />
+    <ol class="portfolio">
+      <li class="portfolio-item">
+        <div class="item-overview">
+          <h4><a href="http://getkale.com">Kale</a></h4>
+          <h5>Product design / management &middot; Front-end dev &middot; iOS Client &middot; Rails APIs</h5>
+          <p>Celebrate your food to eat healthier. Kale helps people track and share their meals.</p>
         </div>
-      </li><!-- end .timeline-item -->
 
-      <li class="year inner-year">2012</li>
+        <ul class="product-showcase">
+          <li class="product-screenshot">
+            <img src="/assets/kale-hero-iphones.png" width="100%" class="hero-image" />
+            <h6>Fig. K-1</h6>
+            <p>Mobile designs for Kale iOS app.</p>
+          </li>
 
-      <li class="timeline-item">
-        <div class="timeline-point"></div>
-        <div class="timeline-container cf">
-          <div class="timeline-brief">
-            <h4><a href="http://corhq.com">Cor</a></h4>
-            <h5>Product design &middot; Front-end dev &middot; PHP back-end integration</h5>
-            <p>Health is no longer a perk, it’s a priority. Cor is an employee wellness engagement platform.</p>
-          </div><!-- end .timeline-brief -->
-          <div class="timeline-showcase">
-            <img src="http://paulmederos.s3.amazonaws.com/adventures/cor-preview.png" 
-                 class="timeline-preview" data-description="timeline-cor" />
-          </div>
-        </div><!-- end .timeline-container -->
+          <li class="product-screenshot">
+            <img src="/assets/kale-hero-web.png" width="100%" />
+            <h6>Fig. K-2</h6>
+            <p>Landing pages, web app, and email templates.</p>
+          </li>
+        </ul>
+      </li><!-- end .portoflio-item -->
 
-        <div class="timeline-description" id="timeline-cor">
-          <h6>The Story of Cor</h6>
-          <p>Around the beginning of September, I realized I wanted to focus my efforts in health. I wanted to retrace my roots that started with Parkour back in 2003.</p>
-          <p>I looked around for the best health startups in the DC area. Quickly found Nicholas and his gang of wellness chutzpahs. We met for coffee, hit it off, and within a few weeks I had joined the team part-time to help with a refining of their cor(e) product.</p>
+
+      <li class="portfolio-item">
+        <div class="item-overview">
+          <h4><a href="http://corhq.com">Cor</a></h4>
+          <h5>Product design &middot; Front-end dev &middot; PHP CI Integration</h5>
+          <p>Health is no longer a perk, it’s a priority. Cor is an employee wellness engagement platform.</p>
         </div>
-      </li><!-- end .timeline-item -->
 
-      <li class="timeline-item">
-        <div class="timeline-point"></div>
-        <div class="timeline-container cf">
-          <div class="timeline-brief">
-            <h4><a href="http://rebootamerica.org">Startup DC: Reboot America</a></h4>
-            <h5>Web design/development &middot; Rails back-end &middot; Tumblr template</h5>
-            <p>Focusing America’s leading corporations and emerging startups on innovative solutions to our country’s greatest challenges.</p>
-          </div><!-- end .timeline-brief -->
-          <div class="timeline-showcase">
-            <img src="http://paulmederos.s3.amazonaws.com/adventures/reboot-preview.png" class="timeline-preview" />
-          </div>
-        </div><!-- end .timeline-container -->
-      </li><!-- end .timeline-item -->
+        <ul class="product-showcase">
+          <li class="product-screenshot">
+            <img src="/assets/cor-hero-web.png" width="100%" class="hero-image" />
+            <h6>Fig. C-1</h6>
+            <p>Responsive web/mobile designs for Cor.</p>
+          </li>
+
+          <li class="product-screenshot">
+            <img src="/assets/cor-hero-responsives.png" width="100%" />
+            <h6>Fig. C-2</h6>
+            <p>Landing page, dashboards, daily emails, etc.</p>
+          </li>
+        </ul>
+      </li><!-- end .portoflio-item -->
+
+      <li class="portfolio-item">
+        <div class="item-overview">
+          <h4><a href="http://foster.ly">Foster.ly</a></h4>
+          <h5>Product design &middot; Front-end dev &middot; Rails APIs</h5>
+          <p>Supporting entrepreneurs in the DC, MD, and VA area. Connect, learn, and share resources.</p>
+        </div>
+
+        <ul class="product-showcase">
+          <li class="product-screenshot">
+            <img src="/assets/cor-hero-web.png" width="100%" class="hero-image" />
+            <h6>Fig. F-1</h6>
+            <p>Responsive web/mobile designs for Cor.</p>
+          </li>
+
+          <li class="product-screenshot">
+            <img src="/assets/cor-hero-responsives.png" width="100%" />
+            <h6>Fig. F-2</h6>
+            <p>Landing page, dashboards, daily emails, etc.</p>
+          </li>
+        </ul>
+      </li><!-- end .portoflio-item -->
 
 
-    </ol>
-  </div>
-
+    </ol><!-- end .portfolio -->
+  </div><!-- end .adventures -->
 </div><!-- end .container -->
 <footer>
   
