@@ -2,6 +2,6 @@ Paulmederos::Application.routes.draw do
 
   match '/:action' => 'pages#:action'
 
-  root :to => 'pages#adventures'
+  root :to => 'pages#home'
 
 end
