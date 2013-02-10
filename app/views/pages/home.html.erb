@@ -1,5 +1,5 @@
 <div class="navigation-bar"></div>
-<div class="container container-responsive">
+<div class="container container-adaptive">
   <div class="social-bar">
     <a href="http://twitter.com/pvm" class="social-icon twitter"></a>
     <a href="http://dribbble.com/pvm" class="social-icon dribbble"></a>
@@ -7,79 +7,91 @@
 
   <div class="adventures">
     <!-- <div class="timeline-container"></div> -->
-    <div class="intro">
+    <div class="welcome">
       <h3>Adventures</h3>
       <p>If you consider it, design is a way of life.</p>
-      <p>The designer must take it upon themselves to discover the root of a problem. They must consider a problem from all sorts of perspectives, lest they admit weakness in their solution. Their work is never done, for people always change, and design must adapt to people. Therefore, a designer could (and should) be defined by the cumulation of their experiences both within the context of exploring problems and their solutions, and in the context of discovering the world and its beauty.</p>
-
-      <p>Below you can sample a few of my recent perspectives.</p>
-      <p>Each one has its tale. Each one carries its lessons. Each one changed the world &mdash; at least in some small way &mdash; by critically exploring it.</p>
+      <p>The designer must take it upon themselves to discover the root of a problem. They must consider a problem from all sorts of perspectives, lest they admit weakness in their solution. Their work is never done, for people always change, and design must adapt to people.</p>
+      <p>Therefore, a designer could (and should) be defined by the cumulation of their experiences both within the context of exploring problems and their solutions, and in the context of discovering the world and its beauty.</p>
+      <p>Below you can sample a few of my recent perspectives. Each one has its tale. Each one carries its lessons. Each one changed the world &mdash; at least in some small way &mdash; by critically exploring it.</p>
     </div>
 
-    <ol class="portfolio">
-      <li class="portfolio-item">
-        <div class="item-overview">
-          <h4><a href="http://getkale.com">Kale</a></h4>
-          <h5>Product design / management &middot; Front-end dev &middot; iOS Client &middot; Rails APIs</h5>
-          <p>Celebrate your food to eat healthier. Kale helps people track and share their meals.</p>
-        </div>
+    <ol class="timeline">
+      <li class="year">2013</li>
 
-        <ul class="product-showcase">
-          <li class="product-screenshot">
-            <img src="/assets/kale-hero-iphones.png" width="100%" class="hero-image" />
-            <h6>Fig. K-1</h6>
-            <p>Mobile designs for Kale iOS app.</p>
-          </li>
+      <li class="project">
+        <div class="project-point"></div>
+        <div class="project-container cf" id="kale-container">
+          <div class="project-brief">
+            <h4><a href="http://getkale.com">Kale</a></h4>
+            <h5>Product design &middot; Rails Web API &middot; iOS Client</h5>
+            <p>Celebrate your food to eat healthier. Kale helps people track and share their meals.</p>
+          </div>
+          <div class="project-showcase" id="kale-showcase" data-description="project-kale">
+            <div class="project-reveal-content"></div>
+            <div class="project-showcase-hover"></div>
+          </div>
+        </div><!-- end .project-container -->
 
-          <li class="product-screenshot">
-            <img src="/assets/kale-hero-web.png" width="100%" />
-            <h6>Fig. K-2</h6>
-            <p>Landing pages, web app, and email templates.</p>
-          </li>
-        </ul>
-      </li><!-- end .portoflio-item -->
+        <div class="project-description" id="project-kale">
+          <img src="/assets/kale-hero-iphones.png" width="100%" class="hero-image" />
+          <h6>Fig. K-1</h6>
+          <p>Mobile designs for Kale iOS app.</p>
 
+          <img src="/assets/kale-hero-web.png" width="100%" />
+          <h6>Fig. K-2</h6>
+          <p>Landing pages, web app, and email templates.</p>
+        </div><!-- end .project-description -->
+      </li><!-- end .project -->
 
-      <li class="portfolio-item">
-        <div class="item-overview">
-          <h4><a href="http://corhq.com">Cor</a></h4>
-          <h5>Product design &middot; Front-end dev &middot; PHP CI Integration</h5>
-          <p>Health is no longer a perk, it’s a priority. Cor is an employee wellness engagement platform.</p>
-        </div>
+      <li class="year inner-year">2012</li>
 
-        <ul class="product-showcase">
-          <li class="product-screenshot">
-            <img src="/assets/cor-hero-web.png" width="100%" class="hero-image" />
-            <h6>Fig. C-1</h6>
-            <p>Responsive web/mobile designs for Cor.</p>
-          </li>
+      <li class="project">
+        <div class="project-point"></div>
+        <div class="project-container cf" id="cor-container">
+          <div class="project-brief">
+            <h4><a href="http://corhq.com">Cor</a></h4>
+            <h5>Product design &middot; Front-end dev &middot; PHP CI Integ.</h5>
+            <p>Health is no longer a perk, it’s a priority. Cor is an employee wellness engagement platform.</p>
+          </div>
+          <div class="project-showcase" id="cor-showcase" data-description="project-cor">
+            <div class="project-reveal-content"></div>
+            <div class="project-showcase-hover"></div>
+          </div>
+        </div><!-- end .project-container -->
 
-          <li class="product-screenshot">
-            <img src="/assets/cor-hero-responsives.png" width="100%" />
-            <h6>Fig. C-2</h6>
-            <p>Landing page, dashboards, daily emails, etc.</p>
-          </li>
-        </ul>
-      </li><!-- end .portoflio-item -->
+        <div class="project-description" id="project-cor">
+          <img src="/assets/cor-hero-web.png" width="100%" class="hero-image" />
+          <h6>Fig. C-1</h6>
+          <p>Responsive web/mobile designs for Cor.</p>
 
-      <li class="portfolio-item">
-        <div class="item-overview">
-          <h4><a href="http://foster.ly">Foster.ly</a></h4>
-          <h5>Product design &middot; Front-end dev &middot; Rails APIs</h5>
-          <p>Supporting entrepreneurs in the DC, MD, and VA area. Connect, learn, and share resources.</p>
-        </div>
+          <img src="/assets/cor-hero-responsives.png" width="100%" />
+          <h6>Fig. C-2</h6>
+          <p>Landing page, dashboards, daily emails, etc.</p>
+        </div><!-- end .project-description -->
+      </li><!-- end .project -->
 
-        <ul class="product-showcase">
-          <li class="product-screenshot">
-            <img src="/assets/fosterly-hero-web.png" width="100%" class="hero-image" />
-            <h6>Fig. F-1</h6>
-            <p>Responsive web/mobile designs for Fosterly.</p>
-          </li>
-        </ul>
-      </li><!-- end .portoflio-item -->
+      <li class="project">
+        <div class="project-point"></div>
+        <div class="project-container cf" id="fosterly-container">
+          <div class="project-brief">
+            <h4><a href="http://foster.ly">Foster.ly</a></h4>
+            <h5>Product design &middot; Front-end dev &middot; Rails APIs</h5>
+            <p>Supporting entrepreneurs in the DC, MD, and VA area. Connect, learn, and share resources.</p>
+          </div>
+          <div class="project-showcase" id="fosterly-showcase" data-description="project-fosterly">
+            <div class="project-reveal-content"></div>
+            <div class="project-showcase-hover"></div>
+          </div>
+        </div><!-- end .project-container -->
 
+        <div class="project-description" id="project-fosterly">
+          <img src="/assets/fosterly-hero-web.png" width="100%" class="hero-image" />
+          <h6>Fig. F-1</h6>
+          <p>Responsive web/mobile designs for Fosterly.</p>
+        </div><!-- end .project-description -->
+      </li><!-- end .project -->
 
-    </ol><!-- end .portfolio -->
+    </ol><!-- end .timeline -->
   </div><!-- end .adventures -->
 </div><!-- end .container -->
 <footer>

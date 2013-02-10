@@ -12,14 +12,14 @@ body {
   background:$body_background;
 }
 
-h1, h2, h3, h4 { color:#303030; }
+h1, h2, h3, h4 { color:#66392C; }
 
 h1 { color: $main_red; }
 h2 { text-transform:uppercase; margin:0; padding:1em 0; font-weight:100; color:$main_red; font-size:1.75em; }
 h3 { font-size:36px; font-weight:500; margin:2em 0; }
 h4 { margin:0 0 .5em; text-transform:uppercase; font-weight:500; }
 
-p { font-size:large; line-height:1.5; color: #555555;}
+p { font-size:large; line-height:1.5; color: #4B3736;;}
 
 .navigation-bar {
   width:100%;
@@ -65,8 +65,14 @@ p { font-size:large; line-height:1.5; color: #555555;}
   box-sizing: border-box;
 }
 
+.container-adaptive {
+  width:720px;
+  max-width: 720px;
+}
+
 .container-responsive {
   width:72%;
+  max-width: 720px;
 }
 
 .right-align { text-align:right; }
@@ -169,7 +175,7 @@ p { font-size:large; line-height:1.5; color: #555555;}
 }
 
 /*  ------------------------------------------
-      Adventure Rev. 1 Page
+      Adventure Rev. 2 Page
     ------------------------------------------ */
 
 .my-adventures-r1 {    
@@ -181,14 +187,6 @@ p { font-size:large; line-height:1.5; color: #555555;}
       padding:0;
       list-style: none;
     }
-
-    .year {
-      font-size: 18px;
-      color:#999;
-      padding-top:.25em;
-    }
-
-    .inner-year { border-top:4px solid rgba(0,0,0,.1); width:48%; }
 
     .timeline-item {
       display:block;
@@ -359,66 +357,67 @@ p { font-size:large; line-height:1.5; color: #555555;}
 
 }
 
-
 /*  ------------------------------------------
-      Adventure Page Rev. 2
+      Adventure Page Rev. 3
     ------------------------------------------ */
 
-.adventures { padding-bottom:4em; }
+.adventures-r3 { 
+  padding-bottom:4em;
 
-.timeline-container {
-  width:6%;
-  position:fixed;
-  top:5em;
-  right:1em;
-  
-  background:url("/assets/timeline-spine.png") repeat-y top center;
-  height:auto;
-  border-top:4px solid #e52900;
-  min-height: 400px;
-}
+  .timeline-container {
+    width:6%;
+    position:fixed;
+    top:5em;
+    right:1em;
+    
+    background:url("/assets/timeline-spine.png") repeat-y top center;
+    height:auto;
+    border-top:4px solid #e52900;
+    min-height: 400px;
+  }
 
-.intro {
-  width:76%;
-  margin:10em 0 15em;
-}
+  .intro {
+    width:76%;
+    margin:10em 0 15em;
+  }
 
-.portfolio { list-style:none; margin:0; padding:0;}
+  .portfolio { list-style:none; margin:0; padding:0;}
 
-.item-overview {
-  border:1px solid rgba(0,0,0,.15);
-  padding:1em 4%;
-  border-radius:3px;
-  background:white;
+  .item-overview {
+    border:1px solid rgba(0,0,0,.15);
+    padding:1em 4%;
+    border-radius:3px;
+    background:white;
 
-  h4 { font-size: 2.2em; color:#333; text-transform:none; margin:0;}
-  h4 a { color:inherit; text-decoration:none; }
+    h4 { font-size: 2.2em; color:#333; text-transform:none; margin:0;}
+    h4 a { color:inherit; text-decoration:none; }
 
-  h5 { font-weight:100; color:#999; font-size:.8em; margin:1em 0;}
-  p { margin-bottom:0; font-size:1.2em;}
-}
+    h5 { font-weight:100; color:#999; font-size:.8em; margin:1em 0;}
+    p { margin-bottom:0; font-size:1.2em;}
+  }
 
-.product-showcase {
-  margin: 0;
-  padding:0;
-  list-style: none;
-  text-align: right;
+  .product-showcase {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-align: right;
 
-  h6 { margin:2em 0 0; font-size:1em; color: #666; font-weight:100;}
-  p { margin:0; font-size:1em; color:#999; font-weight:100;}
-}
+    h6 { margin:2em 0 0; font-size:1em; color: #666; font-weight:100;}
+    p { margin:0; font-size:1em; color:#999; font-weight:100;}
+  }
 
-.product-screenshot {
-  margin:10em 0;
-}
+  .product-screenshot {
+    margin:10em 0;
+  }
 
-.hero-image { max-width:800px; }
+  .hero-image { max-width:800px; }
 
+ }
 
 
 @media only screen and (max-width: 35em) {
   
-  .container-responsive { width:96%; }
+  .container-responsive, .container-adaptive { width:92%; }
 
   .intro { width:100%; margin-top:0;}
 
@@ -439,4 +438,177 @@ p { font-size:large; line-height:1.5; color: #555555;}
   .product-showcase { text-align:center; }
 }
 
+/*  ------------------------------------------
+      Adventure Page Rev. 4
+    ------------------------------------------ */
 
+.welcome {
+  margin-bottom: 10em;
+  p { font-size: 21px; }
+}
+
+.timeline {
+  background:url("/assets/timeline-spine-r2.png") repeat-y top left;
+  height:auto;
+  border-top:4px solid #e52900;
+  padding:.25em 0 0 0;
+  list-style: none;
+  margin-bottom: 8em;
+  border-bottom:4px solid #ddd;
+}
+
+.year {
+  font-size: 18px;
+  color:#999;
+  padding-top:.25em;
+  font-weight:500;
+  margin-bottom: 1em;
+}
+
+.inner-year { border-top:4px solid #ddd; width:100%; }
+
+.project {
+  position:relative;
+  display:block;
+  margin-bottom: 6em;
+}
+
+.project-point {
+  border-radius: 50%;
+  width:10px;
+  height:10px;
+  border:3px solid $main_red;
+  background: white;
+  position: absolute;
+  top:0;
+  left:47px;
+  z-index: 3;
+}
+
+  .project-point:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+    border-width: 10px;
+  }
+
+  .project-point:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #ddd transparent;
+    border-style: solid;
+    border-width: 10px;
+  }
+
+.project-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  z-index: 1;
+  position: relative;
+  top: 1.9em;
+}
+
+.project-brief {
+  float:left;
+  width:42%;
+  padding:2em 4%;
+
+  h4 { font-size: 2.2em; color:#333; text-transform:none; margin:0;}
+  h4 a {color:$main_red; text-decoration:none; }
+  h4 a:hover { text-decoration:underline; }
+
+  h5 { font-weight:100; color:#999; font-size:.8em; margin:1em 0;}
+  p { margin-bottom:0; }
+}
+
+.project-showcase {
+  float:left;
+  width:50%;
+  overflow-y: hidden;
+  height: 242px;
+  position:relative;
+  background:#eee;
+  cursor: pointer;
+}
+
+.project-reveal-content {
+  display: block;
+  position:absolute;
+  bottom:1em;
+  right:1em;
+  width:42px;
+  height:42px;
+  background:url('/assets/down-arrow.png') no-repeat;
+  z-index: 3;
+}
+
+.pressed .project-reveal-content {
+  -webkit-transform: rotate(180deg);
+     -moz-transform:rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.project-showcase-hover {
+  display: block;
+  width:100%;
+  height:242px;
+  background:$main_red;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease-in-out;
+     -moz-transition: opacity .2s ease-in-out;
+       -o-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+}
+
+.project-showcase:hover .project-showcase-hover,
+.project-showcase.pressed .project-showcase-hover {
+  display: block;
+  opacity: .85;
+  -webkit-transition: opacity .1s linear;
+     -moz-transition: opacity .1s linear;
+       -o-transition: opacity .1s linear;
+          transition: opacity .1s linear;
+}
+
+#kale-showcase { background:url('/assets/home/adventure-kale.png') no-repeat, #65c941; }
+#kale-showcase .project-showcase-hover, #kale-showcase.pressed .project-showcase-hover { background:#65c941; }
+
+#cor-showcase { background:url('/assets/home/adventure-cor.png') no-repeat, #42B9E7; }
+#cor-showcase .project-showcase-hover, #cor-showcase.pressed .project-showcase-hover { background:#42B9E7; }
+
+#fosterly-showcase { background:url('/assets/home/adventure-fosterly.png') no-repeat, #E78830; }
+#fosterly-showcase .project-showcase-hover, #fosterly-showcase.pressed .project-showcase-hover { background:#E78830; }
+
+.project-description {
+  display: none; // Will show up using JS on click
+  background: $body_background;
+  padding:.25em 1em 1em;
+  margin-top: 3em;
+  font-size:18px;
+  color: #999;
+
+  h6 { font-size:1.2em; margin:0 0 .5em; font-weight:100; color:#222;}
+  img { max-height:480px; }
+}
+
+
+@media only screen and (max-width: 35em) {
+  .project-brief { width:92%; float:none; }
+  .project-showcase { width:100%; float:none; }
+  .welcome p { font-size: 1em; }
+}

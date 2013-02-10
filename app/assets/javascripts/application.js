@@ -17,7 +17,7 @@
 
 $(document).ready(function() {
 
-  $('.timeline-preview').toggle(function() {
+  $('.project-showcase').toggle(function() {
     var description = '#' + $(this).data('description');
     $(description).slideDown(300, 'swing');
     $(this).addClass('pressed');
@@ -34,6 +34,5 @@ function hideTimelineDescription(toggledButton){
     var descriptionElement = '#' + description;
     $(descriptionElement).slideUp(300, 'swing');
     toggledButton.removeClass('pressed');
-    $(".description-trigger-open[data-description='" + description +"']").fadeIn();
     event.preventDefault();
 }
